@@ -1,0 +1,53 @@
+:root {
+  --brand: #1b6b4f;
+  --brand-dark: #135239;
+  --bg: #f3f5f2;
+}
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+}
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main { flex: 1; }
+
+.site-nav { background: var(--brand); }
+.site-nav .navbar-brand { color: #fff; }
+.brand-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 8px;
+  background: #fff; color: var(--brand); font-weight: 800;
+}
+.site-footer { color: #6c757d; }
+
+.btn-brand { background: var(--brand); border-color: var(--brand); color: #fff; }
+.btn-brand:hover, .btn-brand:focus { background: var(--brand-dark); border-color: var(--brand-dark); color: #fff; }
+
+.auth-card { border: 0; border-top: 4px solid var(--brand); }
+
+.month-title { min-width: 11ch; text-align: center; }
+
+.stat-card { background: #fff; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.stat-label { font-size: 0.8rem; color: #6c757d; text-transform: uppercase; letter-spacing: 0.04em; }
+.stat-value { font-size: 1.6rem; font-weight: 700; color: #1f2d27; }
+.stat-small { font-size: 1.15rem; }
+
+.cat-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+
+.expense-row { border-top: 1px solid #eef0ed; }
+.expense-row:first-child { border-top: 0; }
+.expense-row:hover { background: #fafbf9; }
+.expense-row.editing { background: #f4faf7; }
+.min-w-0 { min-width: 0; }
+
+.empty-state { border: 2px dashed #d5d9d3; color: #6c757d; margin: 1rem; }
+
+@media (max-width: 575.98px) {
+  .expense-row { flex-wrap: wrap; }
+  .row-actions { width: 100%; justify-content: flex-end; }
+  .stat-value { font-size: 1.3rem; }
+}
